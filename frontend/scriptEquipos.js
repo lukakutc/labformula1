@@ -40,7 +40,7 @@ function cargarEquipos() {
                 <div class="barra-card">
                     <h2>${equipo.nombreCorto}</h2>
                     <div class="container-logo-equipo">
-                        <a href = "equipo/${equipo.id}"><img src="${equipo.logoChico}" alt="${equipo.nombre}"></a>
+                        <a href = "equipos/${equipo.id}"><img src="${equipo.logoChico}" alt="${equipo.nombre}"></a>
                     </div>
                 </div>
                 <img src="${equipo.imagenAuto}" alt="auto Red Bull" class="auto-equipo">

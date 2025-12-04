@@ -1,0 +1,9 @@
+Usuario → Navegador: "Dame /equipo/3"
+        ↓
+Servidor: "Toma, aquí está perfilEscuderia.html"
+        ↓
+Navegador: "Ahora necesito los datos: /api/equipo/3"
+        ↓
+Servidor: "Toma, aquí está {id:3, nombre:"Ferrari"...}"
+        ↓
+Navegador: "Ahora muestro la página con los datos"
