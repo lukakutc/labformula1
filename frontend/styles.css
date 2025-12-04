@@ -1,0 +1,264 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    border-style: solid red 1px;
+}
+
+.titulo-equipos {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+h2 {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: initial;
+}
+
+
+header {
+    display: flex;
+    height: 90px;
+    margin-bottom: 20px;
+
+    background: #131335;
+    background: -webkit-radial-gradient(circle, #0d0d1a 0%, #710e10 50%);
+    background: radial-gradient(circle, #0d0d1a 0%, #710e10 180%);
+
+    align-items: center;
+    /*este centra en eje vertical (y) tambien solo para flex*/
+    justify-content: center;
+    /*justify content:center centra en eje (x). solo para display flex*/
+}
+
+
+.logo-formula {
+    transform: scale(0.3);
+    padding: 0px;
+
+}
+
+
+.logo-equipo-perfil {
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*margin-left: 35%;*/
+  /*margin-top: 100px; */
+}
+
+#logo-equipo {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.fondo-color{
+    display: flex;
+    height: 150px;
+    margin-top: 150px;
+    background: radial-gradient(circle, #0d0d1a 50%, #710e10 180%);
+    align-items: center;
+}
+
+#nombre-equipo{
+    display: flex; 
+    justify-content: center;
+    font-size: 35px;
+}
+
+
+.contenedor-nombre-equipo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 125px;
+  width:100%;
+}
+
+
+.historia-equipo {
+  text-align: left;
+  margin-top: 20px;
+  max-width: 600px;  
+}
+
+body {
+    background-color: #0d0d1a;
+}
+
+
+.container-logo {
+    border-radius: 10%;
+    border: solid black 1px;
+}
+
+.card-equipo {
+    border: solid 1px;
+    width: 640px;
+
+    /*Separa los contenedores los unos de los otros*/
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+
+    position: relative;
+    border-radius: 2.0em;
+    padding: 2em;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    background-color: var(--team-color);
+    background-size: cover;
+}
+
+.barra-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.container-logo-equipo{
+    padding: 5px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+#flecha {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-top: 30px;
+    opacity: 60%;
+    animation: bounce 1s infinite; 
+}
+
+.auto-equipo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.auto-equipo:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+
+
+#lista-equipos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.barra-tareas {
+  display: flex;                  /* coloca los elementos en una fila */
+  justify-content: center;        /* centra horizontalmente */         
+  height: 20px;                   /* altura de la barra */
+  width: 800px;
+  margin: auto;
+  gap: 60px;                      /* separación entre los títulos */
+  top: 1000px;                   /* posición desde la parte superior */
+  color: white;
+  font-family: "Audiowide", sans-serif;
+  padding-bottom: 12px;
+  border-bottom: solid rgb(50, 50, 50) 1px;
+}
+.barra-tareas a {
+    text-decoration: none;        /* elimina el subrayado de los enlaces */
+    color: white;                 /* color del texto */
+    font-size: 14px;              /* tamaño de la fuente */
+    font-weight: bold;            /* negrita */
+}
+
+
+/* Contenedor principal donde se mostrarán las tarjetas de pilotos */
+.pilots-container {
+    display: flex;
+    gap: 50px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Para que se ajusten si no caben en una línea */
+    justify-content: center; /*Alinea las tarjetas*/
+    padding: 20px;
+}
+
+/* Tarjeta de piloto */
+.pilot-card {
+    width: 600px; /* Ancho fijo o ajustable según necesidad */
+    height: 200px; /* Altura fija para mantener proporción */
+    background-color: var(--team-color);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Información del piloto (nombre y número) */
+.pilot-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    text-align: left;
+    z-index: 2;
+}
+
+.pilot-info h3 {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.pilot-info .pilot-number {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Contenedor de la imagen del piloto */
+.pilot-image-container {
+    position: absolute;
+    right: 20px; /* Margen desde el borde derecho */
+    top: 50%;
+    transform: translateY(25%);
+    width: 180px; /* Ancho de la imagen */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen del piloto (desde torso hasta cabeza) */
+.pilot-image {
+    max-height: 460px; /* Limita la altura para que no ocupe todo el espacio */
+    max-width: 100%;
+    object-fit: cover; /* Mantiene proporción sin distorsionar */
+    object-position: bottom center; /* Alinea la parte inferior de la imagen (torso) al centro */
+}
+
+/*Realiza el efecto del piloto elevandose*/
+.pilot-card:hover .pilot-image {
+  transform: translateY(5px) scale(1.10);
+  transition: transform 0.3s ease;
+}
